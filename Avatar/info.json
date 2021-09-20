@@ -1,0 +1,7 @@
+{
+    "author": ["Jason"],
+    "install_msg": "Use `[p]avatar` to get your avatar. Use `[p]avatar <@user>` to get someone else's avatar.",
+    "name": "Avatar",
+    "short": "Displays a given user's avatar.",
+    "description": "Displays a given user's avatar."
+}

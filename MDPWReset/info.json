@@ -1,0 +1,7 @@
+{
+    "author": ["Jason"],
+    "install_msg": "Use `[p]mdpwreset <email>` to reset your password for your MangaDex account. This command only works in DMs.",
+    "name": "MDPWReset",
+    "short": "Reset your password for your MangaDex account.",
+    "description": "This is likely no longer necessary, but after MangaDex was hacked, they released access to the API before access to the frontend. This meant as an end user, you were unable to change your leaked password. I created this Cog as a way to reset your password in the meantime, so your account was not left unsecured. Your email address is not saved, and is simply sent to the MangaDex api endpoint that initiates an account recovery, resulting in you receiving an email from MangaDex with instructions on how to reset your password."
+}

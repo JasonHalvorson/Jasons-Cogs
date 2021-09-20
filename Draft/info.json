@@ -1,0 +1,7 @@
+{
+    "author": ["Jason"],
+    "install_msg": "Use `[p]draft <@user1> <@user2> <@user3...>` to split the users into random teams.",
+    "name": "Draft",
+    "short": "Draft random teams based on the users given.",
+    "description": "Users given will be split randomly into 2 teams."
+}
