@@ -1,0 +1,7 @@
+{
+    "author": ["Jason"],
+    "install_msg": "`Use [p]without` to turn someone's avatar into a Chainsaw Man meme.",
+    "name": "Without",
+    "short": "Turns someone's avatar into a Chainsaw Man meme.",
+    "description": "`[p]without` will use the person above you's avatar. `[p]without <@user>` will use @user's avatar."
+}
