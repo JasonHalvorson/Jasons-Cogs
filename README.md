@@ -31,7 +31,9 @@ My custom Cogs for [Red-DiscordBot](https://github.com/Cog-Creators/Red-DiscordB
 ### Draft random teams based on users provided
   
 #### Usage:
-`[p]draft <@users...>`
+`[p]draft <@users...>` -> Draft a random team based on @users
+
+`[p]redraft` -> Draft again using the same users
 </details>
   
 <details>
@@ -41,4 +43,15 @@ My custom Cogs for [Red-DiscordBot](https://github.com/Cog-Creators/Red-DiscordB
 
 #### Usage:
 `[p]mdpwreset <@email>`
+</details>
+
+<details>
+<summary>Without</summary>
+
+### Photoshop a user's avatar onto a Chainsaw Man meme.
+  
+#### Usage:
+`[p]without` -> Photoshop the user above you
+
+`[p]without <@user>` -> Photoshop @user
 </details>
