@@ -13,9 +13,7 @@ class Draft(BaseCog):
     @commands.command()
     async def draft(self, ctx, *playerlist):
 
-        players = []
-        for player in playerlist:
-            players.append(player)
+        players = list(playerlist)
 
         if len(players) < 2:
             await ctx.send(f"You must specify at least 2 players. Example: `{ctx.clean_prefix}draft @person1 @person2 @person3 ...`")
