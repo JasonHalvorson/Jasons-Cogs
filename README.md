@@ -34,6 +34,8 @@ My custom Cogs for [Red-DiscordBot](https://github.com/Cog-Creators/Red-DiscordB
 `[p]draft <@users...>` -> Draft a random team based on @users
 
 `[p]redraft` -> Draft again using the same users
+  
+`[p]randdraft <@users...>` -> Draft a random team based on @users, and assign a random League of Legends Champion to each @user
 </details>
   
 <details>
