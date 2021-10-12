@@ -80,6 +80,7 @@ class Draft(BaseCog):
                 team_a, team_b = await self.create_teams(players, True)
             
                 em = await self.create_embed(ctx, team_a, team_b)
+                em.set_footer(text=f"Use {ctx.clean_prefix}redraft to draft again with the same players!")
 
             await ctx.send(embed=em)
         
