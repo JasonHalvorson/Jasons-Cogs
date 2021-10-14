@@ -11,6 +11,7 @@ class Without(BaseCog):
 
     @commands.command()
     async def without(self, ctx, user: discord.User=None):
+        """Turn the user above you's avatar into a Chainaw Man meme, or a user of your choosing"""
 
         async with ctx.typing():
 
@@ -24,6 +25,8 @@ class Without(BaseCog):
         await ctx.send(file=discord.File(result))
 
     async def get_avatar(self, user):
+        """Get the user's avatar"""
+
         try:
             res = BytesIO()
             await user.avatar_url_as(format="png", size=1024).save(res, seek_begin=True)
@@ -34,6 +37,8 @@ class Without(BaseCog):
                 return BytesIO(img)
 
     async def create_meme(self, user):
+        """Paste the user's avatar onto the meme image."""
+
         meme_image = Image.open(str(bundled_data_path(self)) + '/without.png')
 
         avatar = await self.get_avatar(user)

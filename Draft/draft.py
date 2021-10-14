@@ -14,6 +14,7 @@ class Draft(BaseCog):
 
     @commands.command()
     async def draft(self, ctx, *playerlist):
+        """Draft users given into two teams."""
 
         players = list(playerlist)
 
@@ -42,6 +43,8 @@ class Draft(BaseCog):
 
     @commands.command()
     async def redraft(self, ctx):
+        """Redraft the previous given users into new teams."""
+
         if isinstance(ctx.channel, discord.channel.DMChannel):
             last_draft = await self.config.user(ctx.author).last_draft()
             draft_champs = await self.config.user(ctx.author).draft_champs()
@@ -61,6 +64,7 @@ class Draft(BaseCog):
 
     @commands.command(aliases=["rd"])
     async def randdraft(self, ctx, *playerlist):
+        """Draft users given into two teams, and assign each user a League of Legends Champion."""
 
         players = list(playerlist)
 
@@ -85,6 +89,8 @@ class Draft(BaseCog):
             await ctx.send(embed=em)
         
     async def create_teams(self, players, draft_champs=False):
+        """Create teams from a list of players, and optionally draft League of Legends champions for them."""
+        
         team_a = []
         team_b = []
 
@@ -155,6 +161,8 @@ class Draft(BaseCog):
         return (team_a, team_b)
 
     async def create_embed(self, ctx, team_a, team_b):
+        """Prepare a Discord embed to be sent by the commands."""
+
         em = discord.Embed(colour=ctx.author.colour if not isinstance(ctx.channel, discord.channel.DMChannel) else await ctx.embed_colour(), title="Teams")
         em.add_field(name="Team A", value=str("\n".join(team_a)), inline=True)
         em.add_field(name="Team B", value=str("\n".join(team_b)), inline=True)

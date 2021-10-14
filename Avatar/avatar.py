@@ -8,7 +8,7 @@ class Avatar(BaseCog):
 
     @commands.command()
     async def avatar(self, ctx, *, user: discord.Member=None):
-        """Get a user's Avatar, Defaults to yourself if user isn't given"""
+        """Get a user's Avatar, defaults to yourself if user isn't given"""
 
         author = ctx.author
 
