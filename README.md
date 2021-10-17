@@ -24,6 +24,15 @@ My custom Cogs for [Red-DiscordBot](https://github.com/Cog-Creators/Red-DiscordB
 
 `[p]avatar <@user>` -> Get @user's avatar
 </details>
+
+<details>
+<summary>Bigmoji</summary>
+
+### Get a bigger version of an emoji
+  
+#### Usage:
+`[p]bigmoji <emoji>` -> Return the big version of the emoji given
+</details>
   
 <details>
 <summary>Draft</summary>

@@ -1,0 +1,7 @@
+{
+    "author": ["Jason"],
+    "install_msg": "Get big versions of emojis!",
+    "name": "Bigmoji",
+    "short": "Get a bigger emoji.",
+    "description": "`[p]bigmoji <emoji>` will return a larger version of <emoji>"
+}
