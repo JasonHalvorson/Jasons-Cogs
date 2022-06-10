@@ -12,6 +12,18 @@ class Draft(BaseCog):
     def __init__(self):
         self.config = Config.get_conf(self, identifier=921840132, force_registration=True)
 
+        default_user = {
+            "last_draft": [],
+            "draft_champs": False
+        }
+        default_guild = {
+            "last_draft": [],
+            "draft_champs": False
+        }
+        
+        self.config.register_user(**default_user)
+        self.config.register_guild(**default_guild)
+
     @commands.command()
     async def draft(self, ctx, *playerlist):
         """Draft users given into two teams."""
@@ -103,6 +115,7 @@ class Draft(BaseCog):
 
                         corrected_champs = {
                             "AurelionSol": "Aurelion Sol",
+                            "Belveth": "Bel'Veth"
                             "Chogath": "Cho'Gath",
                             "DrMundo": "Dr. Mundo",
                             "JarvanIV": "Jarvan IV",
