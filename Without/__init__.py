@@ -1,4 +1,4 @@
 from .without import Without
 
-def setup(bot):
-    bot.add_cog(Without())
+async def setup(bot):
+    await bot.add_cog(Without())

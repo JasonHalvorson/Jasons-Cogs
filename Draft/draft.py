@@ -115,7 +115,7 @@ class Draft(BaseCog):
 
                         corrected_champs = {
                             "AurelionSol": "Aurelion Sol",
-                            "Belveth": "Bel'Veth"
+                            "Belveth": "Bel'Veth",
                             "Chogath": "Cho'Gath",
                             "DrMundo": "Dr. Mundo",
                             "JarvanIV": "Jarvan IV",

@@ -15,11 +15,11 @@ class Avatar(BaseCog):
         if not user:
             user = author
 
-        if user.is_avatar_animated():
-            url = user.avatar_url_as(format="gif")
+        if user.avatar.is_animated():
+            url = user.avatar.replace(format="gif")
 
-        if not user.is_avatar_animated():
-            url = user.avatar_url_as(static_format="png")
+        if not user.avatar.is_animated():
+            url = user.avatar.replace(static_format="png")
 
         em = discord.Embed(colour=user.colour)
         em.set_author(name=str(user) + "'s Avatar", url=url)

@@ -16,7 +16,7 @@ class Without(BaseCog):
         async with ctx.typing():
 
             if not user:
-                user = (await ctx.channel.history(limit=2).flatten())[1].author
+                user = ([messages async for messages in ctx.channel.history(limit=2)])[1].author
 
             result = await self.create_meme(user)
 
@@ -29,10 +29,10 @@ class Without(BaseCog):
 
         try:
             res = BytesIO()
-            await user.avatar_url_as(format="png", size=1024).save(res, seek_begin=True)
+            await user.avatar.replace(format="png", size=1024).save(res, seek_begin=True)
             return res
         except:
-            async with self._session.get(user.avatar_url_as(format="png", size=1024)) as r:
+            async with self._session.get(user.avatar.replace(format="png", size=1024)) as r:
                 img = await r.content.read()
                 return BytesIO(img)
 
